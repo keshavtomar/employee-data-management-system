@@ -2,6 +2,8 @@ import { Avatar } from '@mui/material'
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
+import BadgeIcon from '@mui/icons-material/Badge';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 
 export default function Navbar() {
@@ -24,6 +26,10 @@ export default function Navbar() {
         /* eslint-enable no-bitwise */
 
         return color;
+    }
+
+    const handleAddEmployee = () => {
+        navigate("/addEmployee");
     }
 
     function stringAvatar(name) {
@@ -54,12 +60,20 @@ export default function Navbar() {
         });
     }
 
+    const handleDashboard = () => {
+        navigate('/dashboard');
+    }
+
     return (
         <div>
             <ToastContainer />
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/">Employee Management</Link>
+                    <span className='badgeicon'><BadgeIcon /></span>
+
+                    <Link className="navbar-brand" to="/">
+                        Employee Management
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -78,6 +92,15 @@ export default function Navbar() {
                                 </li>
                             </ul> :
                             <ul className="navbar-nav me-4 my-2 my-lg-0 navbar-nav-scroll" style={{ '--bs-scroll-height': '100px' }}>
+                                <li className='nav-item'>
+                                    <button type='button' className='btn btn-primary' style={{ 'height': '100%', 'margin-right': '15px' }} onClick={handleDashboard}>
+                                        <DashboardIcon />
+                                        Dashboard
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" className="btn btn-warning" style={{ 'height': '100%', 'margin-right': '15px' }} onClick={handleAddEmployee}>Add Employee</button>
+                                </li>
                                 <li className="nav-item dropstart">
                                     <Link className="nav-link " to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <Avatar {...stringAvatar(localStorage.getItem('userName'))} />
@@ -86,7 +109,7 @@ export default function Navbar() {
                                         <li><Link className="dropdown-item" to="/">Profile</Link></li>
                                         <li><hr className="dropdown-divider" /></li>
                                         <li className='text-center'>
-                                            <button type="button" class="btn btn-outline-danger " onClick={handlelogout}>Log Out</button>
+                                            <button type="button" className="btn btn-outline-danger " onClick={handlelogout}>Log Out</button>
                                         </li>
                                     </ul>
                                 </li>

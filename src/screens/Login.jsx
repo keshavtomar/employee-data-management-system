@@ -67,7 +67,7 @@ export default function Login() {
                 <div className="forms">
                     <div className="form-wrapper is-active">
                         <button type="button" className="switcher switcher-login">
-                            <Link to="/login" className="switcher-login" style={{ textDecoration: "none" }}> Login </Link>
+                            <Link to="/login" className="switcher-login" style={{ textDecoration: "none", 'color': 'grey' }}> Login </Link>
                             <span className="underline"></span>
                         </button>
                         <form className="form form-login">
@@ -87,7 +87,7 @@ export default function Login() {
                     </div>
                     <div className="form-wrapper">
                         <button type="button" className="switcher switcher-signup">
-                            <Link to="/signup" className="switcher-login" style={{ textDecoration: "none", color: "white" }}> Signup </Link>
+                            <Link to="/signup" className="switcher-login" style={{ textDecoration: "none", 'color': 'grey' }}> Signup </Link>
                             <span className="underline"></span>
                         </button>
                         <form className="form form-signup">
@@ -99,7 +99,7 @@ export default function Login() {
                                 </div>
                                 <div className="input-block">
                                     <label htmlFor="signup-email">E-mail</label>
-                                    <input id="signup-email" type="email" required />
+                                    <input id="signup-email2" type="email" required />
                                 </div>
                                 <div className="input-block">
                                     <label htmlFor="signup-password">Password</label>

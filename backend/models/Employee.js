@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const EmployeeSchema = new Schema({
-    _id: {
+    id: {
         type: Number,
         required: true
     },

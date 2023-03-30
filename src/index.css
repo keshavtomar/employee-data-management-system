@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Fira Sans', sans-serif;
+  background-color: #DAF5FF;
 }
 
 code {
@@ -24,11 +25,6 @@ code {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
-  background: #3b4465;
-}
 
 .card-img-top {
   height: 200px;
@@ -326,4 +322,30 @@ body {
   right: 100px;
   height: 10%;
   margin-top: 25px;
+}
+
+.form-area{
+  margin: 5% 20%;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.badgeicon{
+  position: relative;
+  bottom: 3px;
+  margin: 4px;
+}
+
+Modal{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.Footer{
+  width: 100%;
+  position:fixed;
+  bottom: 0;
+  justify-content: center;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+  text-shadow: #3b4465;
 }

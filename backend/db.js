@@ -15,7 +15,16 @@ const mongoDB = () => {
             console.log(err);
         }
         else {
-            console.log("Database connection successfull");
+            const employees = await mongoose.connection.db.collection("employees");
+            employees.find({}).toArray(async (err, empData) => {
+                // I can also write if-else instead of try catch
+                try {
+                    global.emp = empData;
+                } catch (error) {
+                    console.log(error);
+                }
+                console.log("Database connection successfull");
+            })
         }
     });
 }

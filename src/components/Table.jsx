@@ -1,13 +1,31 @@
-import React from 'react'
-import Eye from '@mui/icons-material/RemoveRedEye';
+import React, { useState, useEffect } from 'react'
 import '../styles/tablestyle.css'
-import EditIcon from '@mui/icons-material/Edit';
+import Row from './Row';
+
 
 
 export default function Table() {
+
+    const [empData, setempData] = useState([])
+
+    const loadData = async () => {
+        let response = await fetch("http://localhost:4000/api/employeeData", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        response = await response.json()
+        setempData(response[0]);
+    }
+
+    useEffect(() => {
+        loadData();
+    }, [])
+
     return (
         <div>
-            <table class="styled-table">
+            <table className="styled-table">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -19,39 +37,19 @@ export default function Table() {
                         </th>
                     </tr>
                 </thead>
+
                 <tbody>
-                    <tr>
-                        <td>124</td>
-                        <td>Dom Kater dex</td>
-                        <td>6000</td>
-                        <td>
-                            <button type="button" class="btn btn-info">
-                                <Eye></Eye>
-                            </button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-info">
-                                <EditIcon></EditIcon>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="active-row">
-                        <td>123</td>
-                        <td>Melissa</td>
-                        <td>5150</td>
-                        <td>
-                            <button type="button" class="btn btn-info text-success">
-                                <Eye></Eye>
-                            </button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-info text-success">
-                                <EditIcon></EditIcon>
-                            </button>
-                        </td>
-                    </tr>
+                    {empData !== [] ?
+                        empData.map((emp, i) => {
+                            return (
+                                <Row data={emp} ind={i} key={i} />
+                            );
+                        })
+                        :
+                        null
+                    }
                 </tbody>
             </table>
-        </div>
+        </div >
     )
 }

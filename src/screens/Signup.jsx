@@ -72,7 +72,7 @@ export default function Signup() {
                 <div className="forms">
                     <div className="form-wrapper">
                         <button type="button" className="switcher switcher-login">
-                            <Link to="/login" className="switcher-login" style={{ textDecoration: "none", color: "white" }}> Login </Link>
+                            <Link to="/login" className="switcher-login" style={{ textDecoration: "none", 'color': 'grey' }}> Login </Link>
                             <span className="underline"></span>
                         </button>
                         <form className="form form-login">
@@ -92,7 +92,7 @@ export default function Signup() {
                     </div>
                     <div className="form-wrapper is-active">
                         <button type="button" className="switcher switcher-signup">
-                            <Link to="/signup" className="switcher-login" style={{ textDecoration: "none" }}> Signup </Link>
+                            <Link to="/signup" className="switcher-login" style={{ textDecoration: "none", 'color': 'grey' }}> Signup </Link>
                             <span className="underline"></span>
                         </button>
                         <form className="form form-signup" onSubmit={handleSubmit}>

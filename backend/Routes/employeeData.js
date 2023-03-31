@@ -5,14 +5,14 @@ const Router = express.Router();
 const mongoose = require('mongoose');
 
 Router.post('/employeeData', async (req, res) => {
-    const employees = await mongoose.connection.db.collection("employees");
-    employees.find({}).toArray(async (err, empData) => {
-        try {
-            res.send([empData]);
-        } catch (error) {
-            console.log(error);
-        }
-    })
+    try {
+        const employees = await mongoose.connection.db.collection("employees");
+        employees.find({}).toArray(async (err, empData) => {
+            res.send([empData])
+        })
+    } catch (error) {
+        console.log(error);
+    }
 })
 
 module.exports = Router;

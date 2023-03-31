@@ -60,8 +60,10 @@ export default function Navbar() {
         });
     }
 
+    let myname = 'Keshav';
+
     const handleDashboard = () => {
-        navigate('/dashboard');
+        navigate('/dashboard', myname);
     }
 
     return (

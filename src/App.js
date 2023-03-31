@@ -10,25 +10,23 @@ import Home from './screens/Home'
 import Form from './screens/AddEmployee'
 import Update from './screens/Update';
 import Dashboard from './screens/Dashboard'
-import { loginContext } from './components/Context';
-import { useEffect, useState, useContext } from 'react';
+import { LoginContext } from './components/ContextProvider/Context';
+import { useEffect, useContext } from 'react';
 
 function App() {
-  const { empData, setempData } = useContext(loginContext);
+  const { empData, setempData } = useContext(LoginContext);
 
-  const loadData = async () => {
-    let response = await fetch("http://localhost:4000/api/employeeData", {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    response = await response.json()
-    console.log(response[0]);
-    await setempData(response[0]);
-  }
 
   useEffect(() => {
+    const loadData = async () => {
+      const response = await fetch("http://localhost:4000/api/employeeData", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      const data = await response.json()
+    }
     loadData();
   }, [])
 

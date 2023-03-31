@@ -16,3 +16,13 @@
     box-shadow: 0 7px 25px rgba(0,0,0,0.08);
     border-radius: 20px;
 }
+
+.nbox{
+        position: relative;
+            margin-top: 20px;
+            background: #fff;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+            border-radius: 20px;
+}

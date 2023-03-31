@@ -7,6 +7,7 @@ const mongoURI = 'mongodb+srv://keshavtomar:' + password + '@cluster0.ibzyjol.mo
 
 mongoose.set('strictQuery', true);
 
+
 const mongoDB = () => {
     // if showing error in mongoose that mongoose.connect no longer requests a callback, downgrade your mongoose
     mongoose.connect(mongoURI, { useNewUrlParser: true }, async (err) => {

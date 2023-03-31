@@ -68,3 +68,35 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+#SCREENSHOTS
+
+Before Login
+<img width="940" alt="image" src="https://user-images.githubusercontent.com/100251921/229147092-e74a5f62-f9bd-414e-94e0-6690e839974c.png">
+
+Login and Signup page
+<img width="944" alt="image" src="https://user-images.githubusercontent.com/100251921/229147224-aba88af2-001d-478e-9b0a-8cb446e4005d.png">
+
+After Login
+<img width="944" alt="image" src="https://user-images.githubusercontent.com/100251921/229147292-1c2775b5-de70-47d8-831e-e1d3778c2873.png">
+
+View of a employee data in modal (after clicking eye)
+<img width="953" alt="image" src="https://user-images.githubusercontent.com/100251921/229147496-57a3e4b1-2516-4c66-97dd-49ab9e385820.png">
+
+Update form for a specific employee data
+<img width="957" alt="image" src="https://user-images.githubusercontent.com/100251921/229147646-0079d0c7-02a3-4721-b265-63e6847d3d94.png">
+
+Dashboard
+<img width="948" alt="image" src="https://user-images.githubusercontent.com/100251921/229147786-351463be-e526-4ad0-806b-580e2a3dd13c.png">
+<img width="946" alt="image" src="https://user-images.githubusercontent.com/100251921/229147863-7656b8e4-0e0e-469e-a5d4-98046b8550fe.png">
+
+Add a new Employee data
+<img width="949" alt="image" src="https://user-images.githubusercontent.com/100251921/229148042-6dba773f-0940-4062-8197-998834605511.png">
+
+Logout functionality
+<img width="942" alt="image" src="https://user-images.githubusercontent.com/100251921/229148256-5caa9305-2cda-4c7e-a402-750447a5bfed.png">
+
+
+
